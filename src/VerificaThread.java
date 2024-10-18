@@ -34,9 +34,11 @@ public class VerificaThread extends Thread {
             }
             }
         } else {
-                for (int i = 0; i < arrayDiNumeri.length; i++) {
+                int i = 0;
+                while (index < arrayDiNumeri.length) {
                     synchronized (index) {
                         System.out.println("Valore: " + arrayDiNumeri[i] + " Indice: " + i);
+                        i++;
                     }
                     try {
                         Thread.sleep(1000);
